@@ -2,11 +2,11 @@ clear all
 clc
 
 
-MEPPpath = '..\MPEE_V1';
+MEPPpath = '.\MPEE_V1';
 addpath(MEPPpath);
 
 
-DataPath = '..\TestData';
+DataPath = '.\TestData';
 DataName1 = 'PMall_Vtest.mat';
 DataName2 = fullfile(DataPath,DataName1);
 load(DataName2,'PMall');
