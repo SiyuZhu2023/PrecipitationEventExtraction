@@ -1,7 +1,7 @@
 clear all
 clc
 
-
+%% load the data
 MEPPpath = '.\MPEE_V1';
 addpath(MEPPpath);
 
@@ -11,8 +11,18 @@ DataName1 = 'PMall_Vtest.mat';
 DataName2 = fullfile(DataPath,DataName1);
 load(DataName2,'PMall');
 
+%% core function
 PMinput = PMall;
 Eventlist = MPEE_V1(PMinput);
+
+% For more details please check Function file
+%   Eventlist = MPEE_V1(PMinput, ...
+%       'SeedThreshold',      1.5,    ... 
+%       'PeripheralThreshold',0.1,    ... 
+%       'FilterKernel',       [5 5 5],... 
+%       'DilationIterations', 50,     ... 
+%       'DilationRadius',     1,      ... 
+%       'MinEventSize',       200);       
 
 
 %% --- Print field explanations ------------------------------------------
